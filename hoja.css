@@ -1,0 +1,93 @@
+
+.diseñoBody{
+background-color: white;
+margin-left: 5px;
+}
+main{
+    margin-top: 1rem;
+}
+.mainPerros{
+    margin-top: 8rem;
+}
+.mainAves{
+    margin-top: 11rem;
+}
+.imagenes{
+display: flex;
+flex-direction: row;
+flex-wrap:nowrap;
+justify-content:center;
+}
+.imagenSecciones{
+margin-top: 10px;
+}
+.imagenSecciones:hover{
+transform: scale(1.2, 1.1);
+}
+
+.navegador{
+    background-color: orange;
+}
+
+#logo{
+    display: block;
+    margin:auto;
+    border-top: orange 10px solid;
+}
+h2{
+color: white;
+text-align: center;
+margin-top: 20px;
+}
+p{
+margin-top: 10px;
+display: inline-block;
+background: linear-gradient(orange,yellow);
+}
+
+
+.navegadorPagina a:hover{
+background-color:rgb(255, 255, 255, 0.2);
+}
+
+.estiloFooter{
+background-color:orange;
+}
+*{
+margin: 0;
+padding: 0;
+font-family: 'Oswald', sans-serif;
+}
+.center{
+padding-bottom: 30px;
+}
+table{
+color:black;
+text-align: center;
+margin-left: auto;
+margin-right: auto;
+margin-top: 10px;
+}
+.formularios{
+color:black;
+margin: 10px;
+}
+.inicioImg{
+    display: block;
+    margin: auto;
+}
+
+.boton{
+    display: inline-block;
+    justify-content: center;
+}
+.promociones{
+    margin-top: 160px;
+}
+
+
+
+
+
+
+
