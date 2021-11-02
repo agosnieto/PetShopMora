@@ -1,0 +1,63 @@
+body {
+  background-color: white;
+  margin-left: 5px;
+}
+
+#logo {
+  display: block;
+  margin: auto;
+  border-top: 10px solid white;
+}
+
+.navegador {
+  margin-top: 5px;
+}
+
+main {
+  margin-top: 1rem;
+}
+
+.mainPerros {
+  margin-top: 8rem;
+}
+
+.mainAves {
+  margin-top: 11rem;
+}
+
+.secciones {
+  text-decoration: none;
+}
+
+.secciones:hover {
+  -webkit-transform: scale(2, 2);
+          transform: scale(2, 2);
+}
+
+.mainNuevosIngresos {
+  margin-top: 180px;
+}
+
+.promociones {
+  margin-top: 160px;
+}
+
+.estiloFooter {
+  background-color: orange;
+  margin-top: 10px;
+}
+
+#consejosImg {
+  display: block;
+  margin: auto;
+}
+
+.boton {
+  display: inline-block;
+  margin-left: 450px;
+}
+
+.margenSeccion {
+  margin-top: 10px;
+}
+/*# sourceMappingURL=estilo.css.map */
