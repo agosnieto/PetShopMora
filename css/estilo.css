@@ -4,42 +4,32 @@ body {
 }
 
 #logo {
-  display: block;
-  margin: auto;
-  border-top: 10px solid white;
+  margin-left: 10px;
 }
 
-.navegador {
-  margin-top: 5px;
-}
-
-main {
-  margin-top: 1rem;
-}
-
-.mainPerros {
-  margin-top: 8rem;
-}
-
-.mainAves {
-  margin-top: 11rem;
+.letras {
+  font-size: 20px;
 }
 
 .secciones {
   text-decoration: none;
+  color: black;
+  font-weight: 500;
 }
 
-.secciones:hover {
-  -webkit-transform: scale(2, 2);
-          transform: scale(2, 2);
+.secciones ul a {
+  list-style-type: none;
 }
 
-.mainNuevosIngresos {
-  margin-top: 180px;
+.secciones :hover {
+  color: orange;
 }
 
-.promociones {
-  margin-top: 160px;
+h2 {
+  color: black;
+  text-align: center;
+  font-style: italic;
+  margin-top: 1rem;
 }
 
 .estiloFooter {
@@ -53,11 +43,74 @@ main {
 }
 
 .boton {
-  display: inline-block;
-  margin-left: 450px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-decoration: none;
+  color: black;
+  border-radius: 5px;
+  border-color: yellow;
 }
 
-.margenSeccion {
+.cajaSecciones {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   margin-top: 10px;
+}
+
+.imgSecciones {
+  margin-top: 25px;
+  border: 2px black solid;
+}
+
+@media (max-widht: 992px) {
+  body header .letras2 {
+    font-size: 25px;
+  }
+  body main .letras {
+    font-size: 30px;
+  }
+  body main #consejosImg {
+    width: 50px;
+    height: 150px;
+  }
+}
+
+@media (max-widht: 768px) {
+  body header .letras2 {
+    font-size: 30px;
+  }
+  body main .letras {
+    font-size: 35px;
+  }
+  body main #consejosImg {
+    width: 50px;
+    height: 150px;
+  }
+}
+
+@media (max-widht: 576px) {
+  body header .letras2 {
+    font-size: 25px;
+  }
+  body main .letras {
+    font-size: 20px;
+  }
+  body main #consejosImg {
+    width: 50px;
+    height: 150px;
+  }
 }
 /*# sourceMappingURL=estilo.css.map */

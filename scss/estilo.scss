@@ -1,35 +1,41 @@
+@mixin letra {
+    color: black;
+    text-align: center;
+    font-style: italic;
+    margin-top: 1rem;
+}
+
+@mixin cajas {
+    display: flex;
+    flex-direction:row;
+    justify-content:space-around;
+    flex-wrap:wrap;
+    margin-top: 10px;
+}
 body{
     background-color: white;
     margin-left: 5px;
+    
 }
 #logo{
-    display: block;
-    margin:auto;
-    border-top: 10px solid white;}
+    margin-left: 10px;}
 
-.navegador{
-    margin-top: 5px;
-}
-main{
-    margin-top: 1rem;
-}
-.mainPerros{
-    margin-top: 8rem;
-}
-.mainAves{
-    margin-top: 11rem;
+.letras {
+    font-size: 20px;
 }
 .secciones{
     text-decoration: none;
-}
-.secciones:hover{
-    transform: scale(2,2);
+    color: black;
+    font-weight: 500;
+    ul a{
+        list-style-type: none;
     }
-.mainNuevosIngresos{
-    margin-top: 180px;
-}
-.promociones{
-    margin-top: 160px;
+    :hover{
+        color: orange;
+    }}
+
+h2{
+    @include letra();
 }
 .estiloFooter{
     background-color:orange;
@@ -40,10 +46,72 @@ main{
     margin:auto;
 }
 .boton{
-    display: inline-block;
-    margin-left: 450px;
-
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    color: black;
+    border-radius: 5px;
+    border-color: yellow
 }
-.margenSeccion{
-    margin-top: 10px;
+.cajaSecciones{
+    @include cajas();
+}
+.imgSecciones{
+    margin-top: 25px;
+    border: 2px black solid;
+}
+
+@media (max-widht: 992px){
+    body{
+        header{
+            .letras2{
+                font-size: 25px;
+            }
+        }
+        main{
+            .letras{
+                font-size: 30px;
+            }
+            #consejosImg{
+                width: 50px;
+                height: 150px;
+            }
+        }
+    }
+}
+@media (max-widht: 768px){
+    body{
+        header{
+            .letras2{
+                font-size: 30px;
+            }
+        }
+        main{
+            .letras{
+                font-size: 35px;
+            }
+            #consejosImg{
+                width: 50px;
+                height: 150px;
+            }
+        }
+    }
+}
+@media (max-widht: 576px){
+    body{
+        header{
+            .letras2{
+                font-size: 25px;
+            }
+        }
+        main{
+            .letras{
+                font-size: 20px;
+            }
+            #consejosImg{
+                width: 50px;
+                height: 150px;
+        }
+        }
+    }
 }
