@@ -12,6 +12,7 @@ body {
 }
 
 .secciones {
+  margin-top: 15px;
   text-decoration: none;
   color: black;
   font-weight: 500;
@@ -19,10 +20,6 @@ body {
 
 .secciones ul a {
   list-style-type: none;
-}
-
-.secciones :hover {
-  color: orange;
 }
 
 h2 {
@@ -42,17 +39,25 @@ h2 {
   margin: auto;
 }
 
-.boton {
+.boton-personalizado {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   text-decoration: none;
+  font-weight: 500;
+  font-size: 20px;
   color: black;
-  border-radius: 5px;
-  border-color: yellow;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  padding-left: 40px;
+  padding-right: 40px;
+  background-color: #ffd000;
 }
 
 .cajaSecciones {
@@ -72,7 +77,7 @@ h2 {
 
 .imgSecciones {
   margin-top: 25px;
-  border: 2px black solid;
+  border: 1px black solid;
 }
 
 @media (max-widht: 992px) {

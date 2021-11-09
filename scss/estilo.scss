@@ -15,7 +15,6 @@
 body{
     background-color: white;
     margin-left: 5px;
-    
 }
 #logo{
     margin-left: 10px;}
@@ -24,15 +23,14 @@ body{
     font-size: 20px;
 }
 .secciones{
+    margin-top: 15px;
     text-decoration: none;
     color: black;
     font-weight: 500;
     ul a{
         list-style-type: none;
     }
-    :hover{
-        color: orange;
-    }}
+}
 
 h2{
     @include letra();
@@ -45,20 +43,26 @@ h2{
     display: block;
     margin:auto;
 }
-.boton{
+.boton-personalizado{
     display: flex;
     justify-content: center;
-    text-decoration: none;
-    color: black;
-    border-radius: 5px;
-    border-color: yellow
+    align-items: center;
+    text-decoration:none;
+    font-weight:500;
+    font-size:20px;
+    color:black;
+    padding-top:10px;
+    padding-bottom:20px;
+    padding-left:40px;
+    padding-right:40px;
+    background-color:rgb(255, 208, 0);
 }
 .cajaSecciones{
     @include cajas();
 }
 .imgSecciones{
     margin-top: 25px;
-    border: 2px black solid;
+    border: 1px black solid;
 }
 
 @media (max-widht: 992px){
