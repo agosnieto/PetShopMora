@@ -4,7 +4,26 @@
     font-style: italic;
     margin-top: 1rem;
 }
+@mixin boton {
+    border-radius: 3px;
+    font-size: 15px;
+    font-weight: 400;
 
+}
+@mixin boton-personalizado {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration:none;
+    font-weight:500;
+    font-size:20px;
+    color:black;
+    padding-top:10px;
+    padding-bottom:20px;
+    padding-left:40px;
+    padding-right:40px;
+    background-color:rgb(255, 208, 0);
+}
 @mixin cajas {
     display: flex;
     flex-direction:row;
@@ -14,7 +33,13 @@
 }
 body{
     background-color: white;
-    margin-left: 5px;
+}
+a{
+    text-decoration: none;
+}
+
+.colorboton{
+    color: black;
 }
 #logo{
     margin-left: 10px;}
@@ -31,7 +56,6 @@ body{
         list-style-type: none;
     }
 }
-
 h2{
     @include letra();
 }
@@ -44,18 +68,7 @@ h2{
     margin:auto;
 }
 .boton-personalizado{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-decoration:none;
-    font-weight:500;
-    font-size:20px;
-    color:black;
-    padding-top:10px;
-    padding-bottom:20px;
-    padding-left:40px;
-    padding-right:40px;
-    background-color:rgb(255, 208, 0);
+    @include boton-personalizado();
 }
 .cajaSecciones{
     @include cajas();
@@ -64,15 +77,64 @@ h2{
     margin-top: 25px;
     border: 1px black solid;
 }
+h4{
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 35px;
+}
+.formContacto{
+    width:380px;
+    background-color: white;
+    padding: 25px;
+    margin: auto;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    border: 2px black solid;
+    border-radius: 7px;
+    color: black;
+    .controles{
+        width: 90%;
+        background-color: whitesmoke;
+        padding: 10px;
+        border-radius:3px;
+        margin-bottom: 10px;
+        border: 2px orange solid;
+    }
+    textarea{
+        min-height: 100px;
+        max-height: 300px;
+    }
+    .botonEnviar{
+        width: 100%;
+        background-color:orange;
+        color:white;
+        margin-top: 10px;
+        border: 2px black solid;
+        border-radius: 3px;
+        padding: 10px;
+        margin: 10 px 0;
+    }
+    .botonEnviar:hover{
+        color:navy}
+}
 
+.alineacion{
+display: flex;
+justify-content: center;
+}
 @media (max-widht: 992px){
     body{
         header{
             .letras2{
                 font-size: 25px;
             }
+            #logo{
+                display: block;
+                margin: auto;
+                justify-content: center;
+            }
         }
-        main{
             .letras{
                 font-size: 30px;
             }
@@ -80,23 +142,32 @@ h2{
                 width: 50px;
                 height: 150px;
             }
+
         }
     }
-}
 @media (max-widht: 768px){
     body{
         header{
             .letras2{
-                font-size: 30px;
+                font-size: 50px;
+            }
+            #logo{
+                display: block;
+                margin: auto;
+                justify-content: center;
             }
         }
         main{
+            margin-top: 50rem;
             .letras{
                 font-size: 35px;
             }
             #consejosImg{
                 width: 50px;
                 height: 150px;
+            }
+            form{
+                width: 80px;
             }
         }
     }
@@ -107,15 +178,24 @@ h2{
             .letras2{
                 font-size: 25px;
             }
+            #logo{
+                display: block;
+                margin: auto;
+                justify-content: center;
+            }
         }
         main{
             .letras{
-                font-size: 20px;
+            font-size: 20px;
             }
             #consejosImg{
                 width: 50px;
                 height: 150px;
-        }
+            }
+            form{
+                width:40px;
+            }
         }
     }
 }
+
