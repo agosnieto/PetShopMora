@@ -1,0 +1,73 @@
+$colorblack: black;
+$negro-borde: black solid;
+$colororange: orange;
+
+@mixin letra {
+    color:$colorblack;
+    text-align: center;
+    font-style: italic;
+    margin-top: 1rem;
+}
+
+@mixin boton {
+    border-radius: 3px;
+    font-size: 15px;
+    font-weight: 400;
+
+}
+
+@mixin boton-personalizado {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration:none;
+    font-weight:500;
+    font-size:20px;
+    color:$colorblack;
+    padding-top:10px;
+    padding-bottom:20px;
+    padding-left:40px;
+    padding-right:40px;
+    background-color:rgb(255, 208, 0);
+}
+
+@mixin cajas {
+    display: flex;
+    flex-direction:row;
+    justify-content:space-around;
+    flex-wrap:wrap;
+    margin-top: 10px;
+}
+
+@mixin formulario {
+    width:380px;
+    background-color: white;
+    padding: 25px;
+    margin: auto;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    border: 2px $negro-borde;
+    border-radius: 7px;
+    color: black;
+}
+
+@mixin controles {
+    width: 90%;
+        background-color: whitesmoke;
+        padding: 10px;
+        border-radius:3px;
+        margin-bottom: 10px;
+        border: 2px $colororange solid;
+}
+
+@mixin boton-enviar {
+    width: 100%;
+    background-color:$colororange;
+    color:white;
+    margin-top: 10px;
+    border: 2px $negro-borde;
+    border-radius: 3px;
+    padding: 10px;
+    margin: 10 px 0;
+}

@@ -148,11 +148,6 @@ h4 {
           justify-content: center;
 }
 
-.sacala:hover {
-  -webkit-transform: scale(1.3, 1.3);
-          transform: scale(1.3, 1.3);
-}
-
 @media (max-widht: 992px) {
   body header .letras2 {
     font-size: 25px;
@@ -164,10 +159,10 @@ h4 {
         -ms-flex-pack: center;
             justify-content: center;
   }
-  body .letras {
+  body main .letras {
     font-size: 30px;
   }
-  body #consejosImg {
+  body main #consejosImg {
     width: 50px;
     height: 150px;
   }
@@ -184,9 +179,6 @@ h4 {
         -ms-flex-pack: center;
             justify-content: center;
   }
-  body header main {
-    margin-top: 50rem;
-  }
   body header main .letras {
     font-size: 35px;
   }
@@ -199,7 +191,7 @@ h4 {
   }
 }
 
-@media (max-widht: 768px) and (max-widht: 576px) {
+@media (max-widht: 576px) {
   body header .letras2 {
     font-size: 25px;
   }
@@ -219,10 +211,6 @@ h4 {
   }
   body main form {
     width: 40px;
-  }
-  body main .sacala:hover {
-    -webkit-transform: scale(0.75, 0.75);
-            transform: scale(0.75, 0.75);
   }
 }
 /*# sourceMappingURL=estilo.css.map */
