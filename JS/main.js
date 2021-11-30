@@ -1,9 +1,3 @@
-// Nombre del usuario y páis de origen
-let ingreseUsuario = prompt("Ingrese su nombre por favor");
-let pais = prompt("Ingres su país de origen")
-alert(" Bienvenido/a " + " " + ingreseUsuario + " del país" + " " + pais);
-
-// Declaración de variables
 
 let balanceado = "balanceado";
 let precio1 = 1200;
@@ -13,36 +7,76 @@ let accesorios = "accesorios"
 let precio2 = 500;
 let stock2 = 20;
 
-// Edad del usuario y uso de condcionales
-
-let edad =prompt("Ingrese su edad por favor:");
-if (edad >= 18){
-    let respuesta = prompt("¿Desea adquirir algún producto?")
-    if (respuesta == "si"){
-        let compra = prompt("Ingrese producto a comprar, 'balanceado o accesorios'");
-        if (compra == balanceado || compra == accesorios){
-        let cantidad = prompt("Ingrese cantidad del producto que desea");
-            if (compra == balanceado){
-                stock1 -= cantidad
-                alert("El precio a pagar es $"+ precio1 * cantidad);
+// Ciclo for para los productos
+for (let i= 0 ; i <= 25; i ++){
+    let ingreseUsuario = prompt("Ingrese su nombre por favor");
+    let edad =prompt("Ingrese su edad por favor:");
+    if (edad >= 18){
+        let respuesta = prompt("¿Desea adquirir algún producto?")
+            if (respuesta == "si"){
+                let compra = prompt("Ingrese producto a comprar, 'balanceado o accesorios'");
+                if (compra == balanceado || compra == accesorios){
+                let cantidad = prompt("Ingrese cantidad del producto que desea");
+                    if (compra == balanceado){
+                        stock1 -= cantidad
+                        alert(ingreseUsuario + " el precio a pagar es $"+ precio1 * cantidad + ", su número de pedido es: " + i);
+                    }
+                    else{
+                        stock2 -= cantidad
+                        alert(ingreseUsuario + " el precio a pagar es $"+ precio2 * cantidad + ", su número de pedido es: " + i);
+                    }
+                }
+                else{
+                    alert("No se encontró el producto solicitado")
+                }
             }
             else{
-                stock2 -= cantidad
-                alert("El precio a pagar es $"+ precio2 * cantidad);
+                alert("Será redirigido a la seccíon principal, muchas gracias!")
             }
         }
+    else{
+        alert("Recuerde que al ser menor de edad no podrá realizar compras sin supervisión de un adulto")
+        let respuesta2 = prompt ("¿Desea continuar?")
+        if (respuesta2 == "si"){
+            alert("Continuemos!!")
+        }
         else{
-            alert("No se encontró el producto solicitado")
+            alert("¡Muchas gracias por visitar nuestra página " + ingreseUsuario + "!")
         }
     }
 }
-else{
-    alert("Recuerde que al ser menor de edad no podrá realizar compras sin supervisión de un adulto")
-    let respuesta2 = prompt ("¿Desea continuar?")
-    if (respuesta2 == "si"){
-        alert("Continuemos!!")
+
+// Ejemplo while and switch
+let entrada = prompt("Ingrese una fruta")
+while (entrada != "salir"){
+    switch (entrada) {
+        case "banana":
+            alert("Es de color amarillo");
+            break;
+
+        case "manzana":
+            alert("Es de color rojo");
+            break;
+
+        case "naranja":
+            alert("Es de color naranja");
+            break;
+
+        case "pera":
+            alert("Es de color verdde");
+            break;
+
+        default:
+            alert("No hemos encontrado la fruta solicitada, disculpe");
     }
-    else{
-        alert("¡Muchas gracias por visitar nuestra página!")
-    }
+    entrada = prompt("Ingrese una fruta")
 }
+
+//Ejemplo ciclo do while
+let numero = 0
+do {
+    numero= prompt ("Ingrese un número par");
+    alert(numero);
+}while (parseInt(numero));
+
+
