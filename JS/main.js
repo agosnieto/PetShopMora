@@ -1,7 +1,8 @@
+// Declaración de variables
 
 let balanceado = "balanceado";
-let precio1 = 1200;
 let stock1 = 50;
+let precio1 = 1200;
 
 let accesorios = "accesorios"
 let precio2 = 500;
@@ -10,20 +11,30 @@ let stock2 = 20;
 // Ciclo for para los productos
 for (let i= 0 ; i <= 25; i ++){
     let ingreseUsuario = prompt("Ingrese su nombre por favor");
-    let edad =prompt("Ingrese su edad por favor:");
+    let edad =prompt("Ingrese su edad por favor:")
     if (edad >= 18){
         let respuesta = prompt("¿Desea adquirir algún producto?")
             if (respuesta == "si"){
                 let compra = prompt("Ingrese producto a comprar, 'balanceado o accesorios'");
                 if (compra == balanceado || compra == accesorios){
-                let cantidad = prompt("Ingrese cantidad del producto que desea");
+                    let cantidad = prompt("Ingrese cantidad del producto que desea");
                     if (compra == balanceado){
-                        stock1 -= cantidad
-                        alert(ingreseUsuario + " el precio a pagar es $"+ precio1 * cantidad + ", su número de pedido es: " + i);
-                    }
+                        stock1 -= cantidad;
+                        precio(cantidad,precio1)
+                        let formaPago = prompt("¿Desea abonar con tarjeta o efectivo?")
+                        total(formaPago,precioTotal)
+                        let envio = prompt("¿Desea realizar la compra con el envío?. El recargo es de $200")
+                        envioPrecio(precioFinal,envio)
+                        alert(ingreseUsuario + " el monto a abonar es $" + precioEnvioFinal + ", su N° de pedido es: " + i);
+                        }
                     else{
-                        stock2 -= cantidad
-                        alert(ingreseUsuario + " el precio a pagar es $"+ precio2 * cantidad + ", su número de pedido es: " + i);
+                        stock2 -= cantidad;
+                        precio(cantidad, precio2)
+                        let formaPago = prompt("¿Desea abonar con tarjeta o efectivo?")
+                        total(formaPago,precioTotal)
+                        let envio = prompt("¿Desea realizar la compra con el envío?. El recargo es de $200")
+                        envioPrecio(precioFinal,envio)
+                        alert(ingreseUsuario + " el monto a abonar es $" + precioEnvioFinal + ", su N° de pedido es: " + i)
                     }
                 }
                 else{
@@ -46,37 +57,32 @@ for (let i= 0 ; i <= 25; i ++){
     }
 }
 
-// Ejemplo while and switch
-let entrada = prompt("Ingrese una fruta")
-while (entrada != "salir"){
-    switch (entrada) {
-        case "banana":
-            alert("Es de color amarillo");
-            break;
 
-        case "manzana":
-            alert("Es de color rojo");
-            break;
+// Declaración de funciones
 
-        case "naranja":
-            alert("Es de color naranja");
-            break;
-
-        case "pera":
-            alert("Es de color verdde");
-            break;
-
-        default:
-            alert("No hemos encontrado la fruta solicitada, disculpe");
-    }
-    entrada = prompt("Ingrese una fruta")
+//Precio total de cantidad de productos x precio unitario
+function precio(cantidad, precio){
+    precioTotal =(cantidad * precio);
 }
 
-//Ejemplo ciclo do while
-let numero = 0
-do {
-    numero= prompt ("Ingrese un número par");
-    alert(numero);
-}while (parseInt(numero));
+//Precio de acuerdo a forma de pago, corresponde descuento del 10% si es en efectivo sino se le cobrara un recargo del 10% 
+function total (formaPago,precioTotal){
+    if (formaPago == "efectivo"){
+        precioFinal = precioTotal - (precioTotal * 0.10);
+    }
+    else{
+      precioFinal = precioTotal + (precioTotal * 0.10)
+    }
+}
 
+//Precio Final que aparecerá en pantalla modificado en el caso de que haya seleccionado el envío, sino
+// será el precio calculado anteriormente de acuerdo a la metodología de pago
 
+function envioPrecio(precioFinal, envio){
+    if (envio == "si"){
+        precioEnvioFinal =precioFinal + 200
+    }
+    else{
+        precioEnvioFinal = precioFinal
+    }
+}
